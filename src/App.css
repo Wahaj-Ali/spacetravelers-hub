@@ -12,9 +12,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MenuNav {
+  display: flex;
+  justify-content: right; 
+  list-style: none;
+  gap: 24px;
+}
+
+.NavBar {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.NavBar a {
+  display: block;
+  font-size: 16px;
+  padding: 8px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+}
+
+.NavBar a:focus {
+  text-decoration: underline;
 }
