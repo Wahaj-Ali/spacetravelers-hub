@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import missionsSlice from './Missions/missionsSlice';
 
 const reducer = combineReducers({
-  missions: missionsSlice,
+  missions: missionsSlice.reducer,
 });
 
 const store = configureStore({

@@ -2,18 +2,17 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  data: [],
+  missions: [],
   status: 'idle',
   error: null,
 };
 
-const FETCH_URL = `https://api.spacexdata.com/v3/missions`;
+const FETCH_URL = 'https://api.spacexdata.com/v3/missions';
 
-export const fetchData = createAsyncThunk('spacetravelers/missions/FETCH_DATA', async () => {
+export const fetchMissionData = createAsyncThunk('spacetravelers/missions/FETCH_DATA', async () => {
   const response = await axios.get(FETCH_URL);
   return response.data;
 });
-
 
 const missionsSlice = createSlice({
   name: 'missions',
@@ -21,14 +20,14 @@ const missionsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchData.pending, (state) => {
+      .addCase(fetchMissionData.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchData.fulfilled, (state, action) => {
+      .addCase(fetchMissionData.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.data = action.payload;
+        state.missions = action.payload;
       })
-      .addCase(fetchData.rejected, (state, action) => {
+      .addCase(fetchMissionData.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       });

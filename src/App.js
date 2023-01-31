@@ -4,11 +4,12 @@ import MyProfile from './pages/MyProfile';
 import Missions from './pages/Missions';
 import './App.css';
 import Rockets from './pages/Rockets';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Header />
         <Routes>
           <Route path="/" element={<Rockets />} />
