@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Table, Container, Button, Badge,
@@ -8,14 +8,12 @@ import { fetchMissionData, updateMission } from '../Redux/Missions/missionsSlice
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions, status, error } = useSelector((state) => state.missions);
-  const [hasDispatched, setHasDispatched] = useState(false);
 
   useEffect(() => {
-    if (!hasDispatched) {
+    if (missions.length === 0) {
       dispatch(fetchMissionData());
-      setHasDispatched(true);
     }
-  }, [dispatch, hasDispatched]);
+  }, [missions, dispatch]);
 
   if (status === 'loading') {
     return <div>Loading...</div>;
@@ -29,7 +27,7 @@ const Missions = () => {
       </div>
     );
   }
-  console.log(missions);
+
   const MissionTable = () => (
     <Table striped bordered hover size="sm">
       <thead>
