@@ -14,10 +14,32 @@ export const fetchMissionData = createAsyncThunk('spacetravelers/missions/FETCH_
   return response.data;
 });
 
+const reArrangeMissions = (missions) => {
+  const newMissions = [];
+  Object.entries(missions).forEach((mission) => {
+    newMissions.push({
+      id: mission[1].mission_id,
+      name: mission[1].mission_name,
+      description: mission[1].description,
+      reserved: false,
+    });
+  });
+  return newMissions;
+};
+
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    updateMission(state, action) {
+      return {
+        ...state,
+        missions: state.missions.map((mission) => (mission.id === action.payload
+          ? { ...mission, reserved: !mission.reserved }
+          : mission)),
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissionData.pending, (state) => {
@@ -25,7 +47,7 @@ const missionsSlice = createSlice({
       })
       .addCase(fetchMissionData.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.missions = action.payload;
+        state.missions = reArrangeMissions(action.payload);
       })
       .addCase(fetchMissionData.rejected, (state, action) => {
         state.status = 'failed';
@@ -34,4 +56,5 @@ const missionsSlice = createSlice({
   },
 });
 
+export const { updateMission } = missionsSlice.actions;
 export default missionsSlice;

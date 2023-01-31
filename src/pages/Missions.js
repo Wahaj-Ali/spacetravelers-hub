@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Table, Container, Button } from 'react-bootstrap';
-import { fetchMissionData } from '../Redux/Missions/missionsSlice';
+import {
+  Table, Container, Button, Badge,
+} from 'react-bootstrap';
+import { fetchMissionData, updateMission } from '../Redux/Missions/missionsSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -27,12 +29,12 @@ const Missions = () => {
       </div>
     );
   }
-
+  console.log(missions);
   const MissionTable = () => (
-    <Table striped bordered hover>
+    <Table striped bordered hover size="sm">
       <thead>
         <tr>
-          <th>Mission</th>
+          <th style={{ width: '150px' }}>Mission</th>
           <th>Description</th>
           <th style={{ width: '150px' }}>Status</th>
           <th style={{ width: '150px' }}> </th>
@@ -40,12 +42,17 @@ const Missions = () => {
       </thead>
       <tbody>
         {missions.map((mission) => (
-          <tr key={mission.mission_id}>
-            <td>{mission.mission_name}</td>
+          <tr key={mission.id}>
+            <td style={{ fontWeight: 'bold' }}>{mission.name}</td>
             <td>{mission.description}</td>
-            <td><Button variant="secondary">Not a member</Button></td>
-            <td>
-              <Button variant="outline-primary">Join Mission</Button>
+            <td className="text-middle text-center"><Badge bg={mission.reserved ? 'primary' : 'secondary'}>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</Badge></td>
+            <td className="text-middle text-center">
+              <Button
+                variant={mission.reserved ? 'outline-danger' : 'outline-primary'}
+                onClick={() => { dispatch(updateMission(mission.id)); }}
+              >
+                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+              </Button>
             </td>
           </tr>
         ))}
