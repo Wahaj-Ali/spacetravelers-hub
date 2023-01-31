@@ -1,0 +1,27 @@
+.rocket-section {
+    display: flex;
+    padding: 8px;
+}
+
+.rocket-info {
+    display: flex;
+}
+
+.rocket-image {
+    width: 22%;
+}
+
+.rocket-detail {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rocket-summary {
+    text-align: initial;
+}
+
+.rocket-name {
+    display: contents;
+}
