@@ -5,7 +5,7 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      path: '/Rockets',
+      path: '/',
       text: 'Rockets',
     },
     {
@@ -15,7 +15,7 @@ const Navbar = () => {
     },
     {
       id: 3,
-      path: '/',
+      path: '/MyProfile',
       text: 'My Profile',
     },
   ];
