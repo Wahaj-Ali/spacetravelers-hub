@@ -5,6 +5,7 @@ import MyProfile from './pages/MyProfile';
 import Missions from './pages/Missions';
 import './App.css';
 import Rockets from './pages/Rockets';
+import 'bootstrap/dist/css/bootstrap.css';
 import store from './Redux/configureStore';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         </Router>
       </Provider>
     </>
+
 
   );
 }

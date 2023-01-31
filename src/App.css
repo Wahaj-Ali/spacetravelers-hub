@@ -47,8 +47,6 @@
   text-transform: uppercase;
   cursor: pointer;
   color: #61dafb;
-
-  /* text-transform: capitalize; */
 }
 
 .NavBar a:hover {
