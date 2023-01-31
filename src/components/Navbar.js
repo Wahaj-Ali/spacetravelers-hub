@@ -8,6 +8,11 @@ const Navbar = () => {
       id: 1,
       path: '/',
       text: 'My Profile',
+    },
+    {
+      id: 3,
+      path: '/Rockets',
+      text: 'Rockets',
     }
   ];
   return (
