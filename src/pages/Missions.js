@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Table, Container, Button } from 'react-bootstrap';
 import { fetchMissionData } from '../Redux/Missions/missionsSlice';
@@ -6,10 +6,14 @@ import { fetchMissionData } from '../Redux/Missions/missionsSlice';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions, status, error } = useSelector((state) => state.missions);
+  const [hasDispatched, setHasDispatched] = useState(false);
 
   useEffect(() => {
-    dispatch(fetchMissionData());
-  }, [dispatch]);
+    if (!hasDispatched) {
+      dispatch(fetchMissionData());
+      setHasDispatched(true);
+    }
+  }, [dispatch, hasDispatched]);
 
   if (status === 'loading') {
     return <div>Loading...</div>;
@@ -30,8 +34,8 @@ const Missions = () => {
         <tr>
           <th>Mission</th>
           <th>Description</th>
-          <th>Status</th>
-          <th> </th>
+          <th style={{ width: '150px' }}>Status</th>
+          <th style={{ width: '150px' }}> </th>
         </tr>
       </thead>
       <tbody>
