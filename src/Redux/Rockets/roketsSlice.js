@@ -17,19 +17,16 @@ const rocketSlice = createSlice({
   name: 'rocket',
   initialState: rockets,
   reducers: {},
-  extraReducers(builder) {
+  extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
-      const newState = state;
-      Object.entries(action.payload).forEach((element) => {
-        newState.push({
-          id: element[1].id,
-          name: element[1].rocket_name,
-          description: element[1].description,
-          flickr_images: element[1].flickr_images[0],
-          reserved: false,
-        });
-      });
-      return newState;
+      const newState = action.payload.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.rocket_name,
+        description: rocket.description,
+        flickr_images: rocket.flickr_images,
+        reserve: false,
+      }));
+      state.push(...newState);
     });
   },
 });
