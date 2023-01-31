@@ -21,7 +21,7 @@
 
 .MenuNav {
   display: flex;
-  justify-content: right; 
+  justify-content: right;
   list-style: none;
   gap: 24px;
 }
@@ -39,8 +39,9 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  color: #61dafb;;
-  text-transform: capitalize;
+  color: #61dafb;
+
+  /* text-transform: capitalize; */
 }
 
 .NavBar a:hover {
