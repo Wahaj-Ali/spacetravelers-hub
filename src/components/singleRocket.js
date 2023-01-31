@@ -13,7 +13,7 @@ const SingleRocket = (props) => {
         <div className="rocket-detail">
           <h2 className="rocket-name">{name}</h2>
           <p className="rocket-summary">{description}</p>
-          <button type="button" className="reserve-rocket">Reserve</button>
+          <button type="button" className="reserve-rocket">Reserve Rocket</button>
         </div>
       </div>
     </div>

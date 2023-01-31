@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -16,7 +22,7 @@
   color: #282c34;
   box-shadow: 0 10px 10px 5px #fff;
   border: 1px solid #b3b1b1bf;
-  padding: 0 30px;
+  padding: 5px 30px;
 }
 
 .MenuNav {
@@ -30,6 +36,7 @@
   position: relative;
   flex: 1;
   text-align: center;
+  padding: 20px;
 }
 
 .NavBar a {
