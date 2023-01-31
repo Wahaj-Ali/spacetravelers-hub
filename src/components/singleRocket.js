@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { reserveRocket } from '../Redux/Rockets/roketsSlice';
 
 const SingleRocket = (props) => {
-  
   const dispatch = useDispatch();
   const {
     name, description, img, id, reserved,
@@ -16,11 +15,14 @@ const SingleRocket = (props) => {
         <img className="rocket-image" src={img} alt="rocket" />
         <div className="rocket-detail">
           <h2 className="rocket-name">{name}</h2>
-          <p className="rocket-summary">{reserved && <span className="reserved">Reserved</span>}{description}</p>
+          <p className="rocket-summary">
+            {reserved && <span className="reserved">Reserved</span>}
+            {description}
+          </p>
           {reserved ? (
             <button className="cancel-btn" type="button">Cancel Reservation</button>
           ) : (
-            <button className="reserve-rocket" type="button" onClick={() => {dispatch(reserveRocket(id));}}>
+            <button className="reserve-rocket" type="button" onClick={() => { dispatch(reserveRocket(id)); }}>
               Reserve Rocket
             </button>
           )}
