@@ -8,12 +8,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  color: white;
+  color: #282c34;
+  box-shadow: 0 10px 10px 5px #fff;
+  border: 1px solid #b3b1b1bf;
+  padding: 0 30px;
 }
 
 .MenuNav {
@@ -36,9 +39,15 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  color: white;
+  color: #61dafb;;
+  text-transform: capitalize;
+}
+
+.NavBar a:hover {
+  color: #282c34;
 }
 
 .NavBar a:focus {
+  color: #282c34;
   text-decoration: underline;
 }
