@@ -6,7 +6,7 @@ const Header = () => (
   <header className="App-header">
     <img src={logo} alt="Planet logo" className="App-logo" />
     <h1 className="title">
-      Space Travelers`&apos; Hub
+      Space Travelers` Hub
     </h1>
     <Navbar />
   </header>

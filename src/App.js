@@ -12,9 +12,9 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/Missions" element={<Missions />} />
           <Route path="/MyProfile" element={<MyProfile />} />
+          <Route path="/Missions" element={<Missions />} />
+          <Route path="/" element={<Rockets />} />
         </Routes>
       </div>
     </Router>
