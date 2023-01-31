@@ -5,10 +5,15 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   const links = [
     {
+      id: 2,
+      path: '/Missions',
+      text: 'Missions',
+    },
+    {
       id: 1,
       path: '/',
       text: 'My Profile',
-    }
+    },
   ];
   return (
     <nav className="NavBar">
