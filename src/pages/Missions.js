@@ -32,17 +32,17 @@ const Missions = () => {
     <Table striped bordered hover size="sm" className="margin-30">
       <thead>
         <tr>
-          <th style={{ width: '150px' }}>Mission</th>
-          <th>Description</th>
-          <th style={{ width: '150px' }}>Status</th>
-          <th style={{ width: '150px' }}> </th>
+          <th style={{ width: '180px', padding: '8px' }}>Mission</th>
+          <th style={{ padding: '8px' }}>Description</th>
+          <th style={{ width: '150px', padding: '8px' }}>Status</th>
+          <th style={{ width: '150px', padding: '8px' }}> </th>
         </tr>
       </thead>
       <tbody>
         {missions.map((mission) => (
           <tr key={mission.id}>
-            <td style={{ fontWeight: 'bold', padding: '16px' }}>{mission.name}</td>
-            <td className="padding-16">{mission.description}</td>
+            <td style={{ fontWeight: 'bold', padding: '8px' }}>{mission.name}</td>
+            <td style={{ padding: '8px' }}>{mission.description}</td>
             <td className="text-middle text-center"><Badge bg={mission.reserved ? 'primary' : 'secondary'}>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</Badge></td>
             <td className="text-middle text-center">
               <Button

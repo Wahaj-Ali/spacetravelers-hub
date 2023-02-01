@@ -13,7 +13,7 @@ function App() {
     <>
       <Provider store={store}>
         <Router>
-          <div>
+          <div className="App">
             <Header />
             <Routes>
               <Route path="/MyProfile" element={<MyProfile />} />
