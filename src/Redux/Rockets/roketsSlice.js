@@ -25,6 +25,14 @@ const rocketSlice = createSlice({
         return { ...rocket, reserved: true };
       });
     },
+    cancelReservation(state, action) {
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return { ...rocket };
+        }
+        return { ...rocket, reserved: false };
+      });
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
