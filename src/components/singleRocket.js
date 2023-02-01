@@ -20,7 +20,7 @@ const SingleRocket = (props) => {
             {description}
           </p>
           {reserved ? (
-            <button className="cancel-btn" type="button" onClick={() => { dispatch(cancelReservation(id)); }}>Cancel Reservation</button>
+            <button className="cancel-reservation" type="button" onClick={() => { dispatch(cancelReservation(id)); }}>Cancel Reservation</button>
           ) : (
             <button className="reserve-rocket" type="button" onClick={() => { dispatch(reserveRocket(id)); }}>
               Reserve Rocket
