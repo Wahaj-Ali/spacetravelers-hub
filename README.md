@@ -3,9 +3,9 @@
 <div align="left">
   <h1>Project: Space Travelers' Hub</h1>
 
-## In this milestone We will Create the TV hub: with APIs:
+## In this milestone We will Create the React group prokect:
 
-> The JavaScript capstone project (remember what they are?) is about building a TV hub web application based on an external API(TVmaze DB). You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 user interfaces .
+> This is a React group project.
 
 </div>
 
