@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Table, Container, Button } from 'react-bootstrap';
-import { fetchMissionData } from '../Redux/Missions/missionsSlice';
+import { Table, Badge } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import { fetchMissionData, updateMission } from '../Redux/Missions/missionsSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions, status, error } = useSelector((state) => state.missions);
-  const [hasDispatched, setHasDispatched] = useState(false);
 
   useEffect(() => {
-    if (!hasDispatched) {
+    if (missions.length === 0) {
       dispatch(fetchMissionData());
-      setHasDispatched(true);
     }
-  }, [dispatch, hasDispatched]);
+  }, [missions, dispatch]);
 
   if (status === 'loading') {
     return <div>Loading...</div>;
@@ -29,23 +29,28 @@ const Missions = () => {
   }
 
   const MissionTable = () => (
-    <Table striped bordered hover>
+    <Table striped bordered hover size="sm" className="margin-30">
       <thead>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th style={{ width: '150px' }}>Status</th>
-          <th style={{ width: '150px' }}> </th>
+          <th style={{ width: '180px', padding: '8px' }}>Mission</th>
+          <th style={{ padding: '8px' }}>Description</th>
+          <th style={{ width: '150px', padding: '8px' }}>Status</th>
+          <th style={{ width: '150px', padding: '8px' }}> </th>
         </tr>
       </thead>
       <tbody>
         {missions.map((mission) => (
-          <tr key={mission.mission_id}>
-            <td>{mission.mission_name}</td>
-            <td>{mission.description}</td>
-            <td><Button variant="secondary">Not a member</Button></td>
-            <td>
-              <Button variant="outline-primary">Join Mission</Button>
+          <tr key={mission.id}>
+            <td style={{ fontWeight: 'bold', padding: '8px' }}>{mission.name}</td>
+            <td style={{ padding: '8px' }}>{mission.description}</td>
+            <td className="text-middle text-center"><Badge bg={mission.reserved ? 'primary' : 'secondary'}>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</Badge></td>
+            <td className="text-middle text-center">
+              <Button
+                variant={mission.reserved ? 'outline-danger' : 'outline-primary'}
+                onClick={() => { dispatch(updateMission(mission.id)); }}
+              >
+                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+              </Button>
             </td>
           </tr>
         ))}
