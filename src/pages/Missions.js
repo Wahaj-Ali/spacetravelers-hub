@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  Table, Container, Button, Badge,
-} from 'react-bootstrap';
+import { Table, Badge } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import { fetchMissionData, updateMission } from '../Redux/Missions/missionsSlice';
 
 const Missions = () => {
@@ -29,7 +29,7 @@ const Missions = () => {
   }
 
   const MissionTable = () => (
-    <Table striped bordered hover size="sm">
+    <Table striped bordered hover size="sm" className="margin-30">
       <thead>
         <tr>
           <th style={{ width: '150px' }}>Mission</th>
