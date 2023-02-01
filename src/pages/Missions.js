@@ -41,8 +41,8 @@ const Missions = () => {
       <tbody>
         {missions.map((mission) => (
           <tr key={mission.id}>
-            <td style={{ fontWeight: 'bold' }}>{mission.name}</td>
-            <td>{mission.description}</td>
+            <td style={{ fontWeight: 'bold', padding: '16px' }}>{mission.name}</td>
+            <td className="padding-16">{mission.description}</td>
             <td className="text-middle text-center"><Badge bg={mission.reserved ? 'primary' : 'secondary'}>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</Badge></td>
             <td className="text-middle text-center">
               <Button
