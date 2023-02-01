@@ -8,10 +8,6 @@ const Rockets = () => {
   const dispatch = useDispatch();
   const reRender = useRef(true);
 
-  // useEffect(() => {
-  //   dispatch(fetchRockets());
-  // }, [dispatch]);
-
   useEffect(() => {
     if (reRender.current) {
       if (rockets.length === 0) {

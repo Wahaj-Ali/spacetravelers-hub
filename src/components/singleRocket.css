@@ -1,6 +1,7 @@
 .rocket-section {
   display: flex;
   padding: 8px;
+  height: 200px;
 }
 
 .rocket-info {
@@ -34,10 +35,8 @@
 }
 
 .cancel-reservation {
-  color: white;
   font-weight: 600;
   width: 10rem;
-  background-color: red;
 }
 
 .reserve-rocket {
