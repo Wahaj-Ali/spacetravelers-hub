@@ -16,10 +16,10 @@ const MyProfile = () => {
     );
   }
   return (
-    <Container className="d-flex margin-30">
+    <Container className="d-flex margin-30 space">
       <Col xs={6} md={4}>
         <ListGroup as="ul">
-          <ListGroup.Item as="li"><h3>My Mission</h3></ListGroup.Item>
+          <h3>My Mission</h3>
           {reservedMission.map((mission) => (
             <ListGroup.Item as="li" key={mission.id}>{mission.name}</ListGroup.Item>
           ))}
@@ -28,7 +28,7 @@ const MyProfile = () => {
 
       <Col xs={6} md={4}>
         <ListGroup as="ul">
-          <ListGroup.Item as="li"><h3>My Rockets</h3></ListGroup.Item>
+          <h3>My Rockets</h3>
           {reservedRockets.map((rocket) => (
             <ListGroup.Item as="li" key={rocket.id}>{rocket.name}</ListGroup.Item>
           ))}
