@@ -36,3 +36,15 @@
   color: #fff;
   width: 8rem;
 }
+
+.reserved {
+  background-color: #389791;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -6px -6px 10px -1px hsl(0deg 0% 100% / 70%);
+  color: #fff;
+  margin-bottom: 0.5rem;
+  margin-right: 0.4rem;
+  padding: 0 0.3rem 0.25rem;
+  text-align: center;
+}

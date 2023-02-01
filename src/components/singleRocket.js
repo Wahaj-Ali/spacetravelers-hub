@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './singleRocket.css';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../Redux/Rockets/roketsSlice';
 
 const SingleRocket = (props) => {
+  const dispatch = useDispatch();
   const {
-    name, description, img,
+    name, description, img, id, reserved,
   } = props;
   return (
     <div className="rocket-section">
@@ -12,8 +15,17 @@ const SingleRocket = (props) => {
         <img className="rocket-image" src={img} alt="rocket" />
         <div className="rocket-detail">
           <h2 className="rocket-name">{name}</h2>
-          <p className="rocket-summary">{description}</p>
-          <button type="button" className="reserve-rocket">Reserve Rocket</button>
+          <p className="rocket-summary">
+            {reserved && <span className="reserved">Reserved</span>}
+            {description}
+          </p>
+          {reserved ? (
+            <button className="cancel-btn" type="button">Cancel Reservation</button>
+          ) : (
+            <button className="reserve-rocket" type="button" onClick={() => { dispatch(reserveRocket(id)); }}>
+              Reserve Rocket
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -24,6 +36,8 @@ SingleRocket.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   img: PropTypes.string,
+  id: PropTypes.string,
+  reserved: PropTypes.bool,
 }.isRequired;
 
 export default SingleRocket;
