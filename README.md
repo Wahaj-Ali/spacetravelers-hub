@@ -3,7 +3,7 @@
 <div align="left">
   <h1>Project: Space Travelers' Hub</h1>
 
-## In this milestone We will Create the React group prokect:
+## In this milestone We will Create the React group project:
 
 > This is a React group project.
 
