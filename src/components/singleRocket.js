@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './singleRocket.css';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../Redux/Rockets/roketsSlice';
+import { cancelReservation, reserveRocket } from '../Redux/Rockets/roketsSlice';
 
 const SingleRocket = (props) => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const SingleRocket = (props) => {
             {description}
           </p>
           {reserved ? (
-            <button className="cancel-btn" type="button">Cancel Reservation</button>
+            <button className="cancel-reservation" type="button" onClick={() => { dispatch(cancelReservation(id)); }}>Cancel Reservation</button>
           ) : (
             <button className="reserve-rocket" type="button" onClick={() => { dispatch(reserveRocket(id)); }}>
               Reserve Rocket

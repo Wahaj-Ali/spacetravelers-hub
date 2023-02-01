@@ -61,6 +61,7 @@
 .rocket-list {
   display: flex;
   flex-direction: column;
+  margin: 10px 40px;
 }
 
 .text-middle {
@@ -73,4 +74,8 @@
 
 .padding-16 {
   padding: 16px;
+}
+
+.space {
+  gap: 24px;
 }
