@@ -150,7 +150,7 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 
 - GitHub: [@Wahaj-Ali](https://github.com/Wahaj-Ali)
 - Twitter: [@Ali96Wahaj](https://twitter.com/Ali96Wahaj)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wahaj-ali96
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wahaj-ali96)
 
 👤 **Md Tariq-ul Islam**
 
