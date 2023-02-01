@@ -148,21 +148,17 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 
 👤 **Wahaj Ali**
 
-<img src="/images/github.svg" alt="logo" width="18"  height="18" />[githubhandle](https://github.com/Wahaj-Ali)
-<br>
-<img src="/images/twitter.svg" alt="logo" width="18"  height="18" /> [twitterhandle](https://twitter.com/Ali96Wahaj)
-<br>
-<img src="/images/linkedin.svg" alt="logo" width="18"  height="18" />[linkedIn](https://www.linkedin.com/in/wahaj-ali96/)
-  <br>
+- GitHub: [@Wahaj-Ali](https://github.com/Wahaj-Ali)
+- Twitter: [@Ali96Wahaj](https://twitter.com/Ali96Wahaj)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wahaj-ali-82b9b1164)
 
 👤 **Md Tariq-ul Islam**
 
-<img src="/images/github.svg" alt="logo" width="18"  height="18" />[githubhandle](https://github.com/developertariq
-<br>
-<img src="/images/twitter.svg" alt="logo" width="18"  height="18" /> [twitterhandle](https://twitter.com/developer_tariq)
-<br>
-<img src="/images/linkedin.svg" alt="logo" width="18"  height="18" />[linkedIn](https://www.linkedin.com/in/developer-tariq/)
-  <br>
+- GitHub: [@developertariq](https://github.com/developertariq)
+- Twitter: [@developer_tariq](https://twitter.com/developer_tariq)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/developer-tariq/)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
