@@ -29,7 +29,7 @@ const Missions = () => {
   }
 
   const MissionTable = () => (
-    <Table striped bordered hover size="sm" className="margin-30">
+    <Table striped bordered hover size="sm" className="margin-30" data-testid="mission">
       <thead>
         <tr>
           <th style={{ width: '180px', padding: '8px' }}>Mission</th>
