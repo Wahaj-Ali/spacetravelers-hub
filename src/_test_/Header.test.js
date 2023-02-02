@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 import Header from '../components/Header';
 
 describe('Header', () => {
-  test('renders Header section correctly', () => {
+  test('renders correctly', () => {
     const tree = renderer.create(
       <Router>
         <Header />
@@ -15,7 +15,7 @@ describe('Header', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('renders the correct Header', () => {
+  test('renders the correct header', () => {
     const { getByTestId } = render(
       <Router>
         <Header />

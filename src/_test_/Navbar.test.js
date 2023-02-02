@@ -26,7 +26,7 @@ describe('Navbar', () => {
     expect(window.location.pathname).toBe('/');
   });
 
-  test('renders the Rockets page is active', () => {
+  test('Rockets page is active', () => {
     const { getByText } = render(
       <Router>
         <Navbar />
@@ -48,7 +48,7 @@ describe('Navbar', () => {
     expect(window.location.pathname).toBe('/Missions');
   });
 
-  test('renders the Missions page is active', () => {
+  test('Missions page is active', () => {
     const { getByText } = render(
       <Router>
         <Navbar />
@@ -70,7 +70,7 @@ describe('Navbar', () => {
     expect(window.location.pathname).toBe('/MyProfile');
   });
 
-  test('renders the My Profile page is active', () => {
+  test('My Profile page is active', () => {
     const { getByText } = render(
       <Router>
         <Navbar />

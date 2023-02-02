@@ -7,7 +7,7 @@ import Missions from '../pages/Missions';
 import missionsSlice, { updateMission } from '../Redux/Missions/missionsSlice';
 
 describe('Missions page', () => {
-  test('renders Missions page correctly', () => {
+  test('renders correctly', () => {
     const tree = renderer.create(
       <Provider store={store}>
         <Missions />
@@ -15,7 +15,9 @@ describe('Missions page', () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+});
 
+describe('updateMission', () => {
   it('should toggle the reserved property of the mission with the specified id', () => {
     const state = {
       missions: [
