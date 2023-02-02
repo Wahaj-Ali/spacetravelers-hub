@@ -32,11 +32,12 @@
 .reserve-rocket {
   border-radius: 5px;
   padding: 0.5rem;
+  font-size: 13px;
 }
 
 .cancel-reservation {
   font-weight: 600;
-  width: 10rem;
+  width: 8.2rem;
 }
 
 .reserve-rocket {
@@ -44,7 +45,7 @@
   border: none;
   box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 15%), -6px -6px 10px -1px hsl(0deg 0% 100% / 70%);
   color: #fff;
-  width: 8rem;
+  width: 6.4rem;
 }
 
 .reserved {
